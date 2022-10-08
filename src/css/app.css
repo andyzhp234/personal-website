@@ -1,0 +1,11 @@
+@import-normalize;
+@import 'home.css';
+@import 'summary.css';
+@import 'projects.css';
+@import 'education.css';
+@import 'experiences.css';
+
+
+body {
+  margin: 0px;
+}
