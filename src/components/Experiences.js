@@ -15,7 +15,7 @@ export default function Experiences() {
           recommandations!!
         </div>
       </div>
-      <img src="self_Portray.JPG" alt="website_img" className='self_portray'/>
+      <img src="self_Portray.jpg" alt="website_img" className='self_portray'/>
     </div>
   )
 }
