@@ -44,7 +44,7 @@ export default function Projects() {
           <img src="https://img.icons8.com/color/344/javascript.png" alt="javascript_icon" />
           <img src="https://img.icons8.com/color/344/nodejs.png" alt="node_icon" />
         </div>
-        <a href="https://to-do-list-backend-andyzhp.herokuapp.com/">Visit the Website</a>        
+        <a href="https://to-do-list-andyzhp.herokuapp.com/">Visit the Website</a>        
       </div>
 
       <div className='project_lists'>
