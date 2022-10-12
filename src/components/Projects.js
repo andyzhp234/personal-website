@@ -39,16 +39,41 @@ export default function Projects() {
         </div>
         <img src="to-do.JPG" alt="website_img" className='todo_list'/>
         <div className='project_lists_description'>
-          <img src="https://img.icons8.com/color/344/vue-js.png" alt="react_icon" />
+          <img src="https://img.icons8.com/color/344/vue-js.png" alt="vue_icon" />
           <img src="https://img.icons8.com/color/344/django.png" alt="django_icon" />
           <img src="https://img.icons8.com/color/344/javascript.png" alt="javascript_icon" />
           <img src="https://img.icons8.com/color/344/nodejs.png" alt="node_icon" />
         </div>
         <a href="https://to-do-list-andyzhp.herokuapp.com/">Visit the Website</a>        
       </div>
+      
+      <div className='project_lists'>
+        (3) Into the Space! (Javascript Mini-game)
+        <div className='project_lists_description'>
+          Implemented the mini game using Vanilla Javascript, HTML, CSS
+        </div>
+        <div className='project_lists_description'>
+          Looking for Adventures??
+        </div>
+        <div className='project_lists_description'>
+          Looking for game where you can explore endless spaces??
+        </div>
+        <div className='project_lists_description'>
+          This game is the right for you !
+        </div>
+        <img src="space-mini-game.JPG" alt="website_img" className='todo_list'/>
+        <div className='project_lists_description'>
+          <img src="https://img.icons8.com/color/344/javascript.png" alt="javascript_icon" />
+          <img src="https://img.icons8.com/color/344/html-5--v1.png" alt="css_icon" />
+          <img src="https://img.icons8.com/color/344/css3.png" alt="css_icon" />
+          <img src="https://img.icons8.com/color/344/nodejs.png" alt="node_icon" />
+        </div>
+        <a href="https://explore-space-game.herokuapp.com/index.html">Visit the Website</a>      
+      </div>
+
 
       <div className='project_lists'>
-        (3) More Coming Soon..
+        (4) More Coming Soon..
       </div>
     </div>
   )
