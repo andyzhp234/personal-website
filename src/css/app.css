@@ -1,11 +1,14 @@
-@import-normalize;
+@import 'navbar.css';
 @import 'home.css';
 @import 'summary.css';
 @import 'projects.css';
-@import 'education.css';
-@import 'experiences.css';
-
+@import 'expertise.css';
+@import 'contact.css';
+@import 'aboutme.css';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 
 body {
   margin: 0px;
+  font-family: 'Quicksand', sans-serif;
 }
+

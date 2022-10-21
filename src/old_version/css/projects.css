@@ -1,0 +1,67 @@
+.projects_box{
+  margin-top: 175px;
+  margin-bottom: 300px;
+  color: white;
+  animation: fadeIn 5s;
+  font-size: 25px;
+  font-family: 'Noto Serif Gujarati', serif;
+  
+}
+
+.project_lists{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  font-size: 20px;
+  margin-left: 50px;
+  width: 60%;
+}
+
+.project_lists_description{
+  margin-left: 35px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.project_lists_description img{
+  width: 60px;
+  height: 60px;
+}
+
+.project_lists a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px white solid;
+  color: white;
+  text-decoration: none;
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  transition: .9s ease-out;
+}
+
+.project_lists a:hover{
+  background-color: white;
+  color: black;
+  transition: .3s ease-out;
+  height: 50px;
+}
+
+
+.todo_list{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 35px;
+  border-radius: 5px;
+  height: 500px;
+  width: 800px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1050px) {
+  .todo_list{
+    display: none;
+  }
+}

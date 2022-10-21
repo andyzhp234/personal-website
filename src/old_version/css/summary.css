@@ -1,0 +1,103 @@
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.pixel_me{
+  width: 400px;
+  height: 400px;
+  animation: fadeIn 3s;
+}
+
+/* Desktop Version */
+@media screen and (min-width: 700px) {
+  .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Serif Gujarati', serif;
+    width: 90%;
+    height: 100vh;
+    color: white;
+    /* background-color: aqua; */
+  }
+
+  .title_hello{
+    font-size: 40px;
+    margin-top: 30px;
+    animation: fadeIn 3s;
+  }
+  
+  .title_name{
+    font-size: 30px;
+    margin-top: 50px;
+    animation: fadeIn 4s;
+  }
+  
+  .title_title{
+    font-size: 55px;
+    margin-top: 25px;
+    animation: fadeIn 5s;
+  }
+  
+  .title_skills {
+    font-size: 20px;
+    margin-top: 35px;
+    animation: fadeIn 5s;
+  }
+
+  .title_summary{
+    font-size: 15px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    animation: fadeIn 5s;
+  }
+}
+
+
+
+
+
+/* Mobile Version */
+@media screen and (max-width: 700px) {
+  .title{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    color: white;
+    font-family: 'Noto Serif Gujarati', serif;
+  }
+  .title_hello{
+    font-size: 10px;
+    margin-top: 30px;
+    animation: fadeIn 3s;
+  }
+  
+  .title_name{
+    font-size: 20px;
+    margin-top: 30px;
+    animation: fadeIn 4s;
+  }
+  
+  .title_title{
+    font-size: 25px;
+    margin-top: 25px;
+    animation: fadeIn 5s;
+  }
+  
+  .title_skills {
+    font-size: 12px;
+    margin-top: 35px;
+    animation: fadeIn 5s;
+  }
+  
+  .title_summary{
+    font-size: 12px;
+    margin-top: 200px;
+    animation: fadeIn 5s;
+  }
+}
+
+

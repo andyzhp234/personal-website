@@ -1,26 +1,79 @@
-import React from 'react'
-import Summary from './Summary'
-import Projects from './Projects'
-import Experiences from './Experiences'
-// import Educations from './Educations'
+import React, {useRef} from 'react'
+import Navbar from './Navbar'
 
-export default function home() {
+import AOS from 'aos';
+import "aos/dist/aos.css";
+import Summary from './Summary';
+import Projects from './Projects';
+import Expertise from './Expertise';
+import Aboutme from './Aboutme';
+import Contact from './Contact';
+
+export default function Home() {
+  const homeRef = useRef(null)
+  const expertiseRef = useRef(null)
+  const projectRef = useRef(null)
+  const aboutmeRef = useRef(null)
+  const contactRef = useRef(null)
+
+
+  React.useEffect(() => {
+    AOS.init({
+      duration : 2000
+    });
+  }, []);
+
   return (
-    <div className='home_body'>
-      <div className='home_container'>
-        <Summary />
+    <div>
+      <Navbar references={{
+        'homeRef':homeRef,
+        'expertiseRef':expertiseRef,
+        'projectRef':projectRef,
+        'aboutmeRef':aboutmeRef,
+        'contactRef':contactRef,
+      }}/>
+      <div className='main_content'>
+        <div className='section first' ref={homeRef}>
+          <Summary />
+        </div>
 
-        <Projects />
-        <Experiences />
-        {/* <Educations /> */}
+        <div className='section second' ref={expertiseRef}>
+          <Expertise />
+        </div>
 
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div className='section thrid' ref={projectRef}>
+          <Projects />
+        </div>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div className='section fourth' ref={aboutmeRef}>
+          <Aboutme />
+        </div>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div className='section fifth' ref={contactRef}>
+          <Contact />
+        </div>
+        
         <div className='footer'>
-          <a href="https://www.linkedin.com/in/haopengzeng/">
-            <img src="https://img.icons8.com/color/344/linkedin.png" alt="linkedin" className='icons'/>
-          </a>
-          <div className='icons_ref'>
-            All Icons used are from https://icons8.com/
-          </div>
+          <p>Created By Haopeng Zeng.</p>
+          <p>All Icons used are from https://icons8.com/</p>
         </div>
       </div>
     </div>

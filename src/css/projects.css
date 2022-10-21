@@ -1,67 +1,177 @@
-.projects_box{
-  margin-top: 175px;
-  margin-bottom: 300px;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+.projects_content{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.project_title{
   color: white;
-  animation: fadeIn 5s;
-  font-size: 25px;
-  font-family: 'Noto Serif Gujarati', serif;
+  font-size: 35px;
+}
+
+.project_sections{
+  height: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.project_type_one{
+  border-radius: 15px;
+  width: 58%;
+  height: 100%;
+  background-color: rgb(39, 39, 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.project_type_two{
+  border-radius: 15px;
+  width: 40%;
+  height: 100%;
+  background-color: rgb(58, 58, 58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   
 }
 
-.project_lists{
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  font-size: 20px;
-  margin-left: 50px;
-  width: 60%;
-}
-
-.project_lists_description{
-  margin-left: 35px;
-  margin-top: 10px;
-  font-size: 15px;
-}
-
-.project_lists_description img{
-  width: 60px;
-  height: 60px;
-}
-
-.project_lists a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px white solid;
-  color: white;
-  text-decoration: none;
-  width: 200px;
-  height: 40px;
-  font-size: 18px;
-  transition: .9s ease-out;
-}
-
-.project_lists a:hover{
-  background-color: white;
-  color: black;
-  transition: .3s ease-out;
-  height: 50px;
-}
-
-
-.todo_list{
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 35px;
-  border-radius: 5px;
-  height: 500px;
-  width: 800px;
+.project_items{
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-@media screen and (max-width: 1050px) {
-  .todo_list{
-    display: none;
+.project_clicked_view{
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.project_clicked_view.first{
+  background-image: url('../../public/chat_app.JPG');
+}
+
+.project_clicked_view.second{
+  background-image: url('../../public/space-mini-game.JPG');
+}
+
+.project_clicked_view.third{
+  background-image: url('../../public/marketplace.JPG');
+}
+
+.project_clicked_view.fourth{
+  background-image: url('../../public/to-do.JPG');
+}
+
+
+.project_black_wrapper{
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.438);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+
+.project_name{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 15%;
+  text-align: center;  
+  color: orange;
+  font-weight: 900;
+  font-size: 30px;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+.goto_project_lower{
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Kanit', sans-serif;
+}
+
+.goto_project_lower a{
+  border-radius: 20px;
+  width: 120px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(218, 218, 218);
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.project_skills{
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  font-family: 'Kanit', sans-serif;
+}
+
+.project_skills p{
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 25px;
+  background-color: azure;
+}
+
+
+
+/* mobile version */
+@media screen and (max-width: 900px) {
+
+  .project_title{
+    font-size: 25px;
+  }
+
+  .project_sections{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project_type_one{
+    width: 100%;
+    height: 45%;
+  }
+  .project_type_two{
+    width: 100%;
+    height: 45%;
+  }
+  .project_name{
+    font-size: 20px;
   }
 }
