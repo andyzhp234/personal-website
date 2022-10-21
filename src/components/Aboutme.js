@@ -45,7 +45,7 @@ export default function Aboutme() {
           <p>
             Besides playing video games, I also like to spend my time watching soccer games.
             I watch Premier League for most the time;
-            I am pretty excited about the The FIFA World Cup Qatar 2022 coming up in November.
+            Currently pretty excited about the The FIFA World Cup Qatar 2022 coming up in November.
           </p>
         </div>
         <div className='aboutme_section_one_detail'>
