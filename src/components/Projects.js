@@ -168,7 +168,7 @@ export default function Projects() {
                   className='goto_project_lower'
                 >
                   <a href='https://github.com/andyzhp234/to-do-heroku'>Github</a>
-                  <a href='https://to-do-list-andyzhp.herokuapp.com/'>Live Demo</a>
+                  <a href='https://andyzhp234.github.io/Into-the-space/'>Live Demo</a>
                 </div>
 
 
