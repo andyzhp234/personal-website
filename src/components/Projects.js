@@ -167,7 +167,7 @@ export default function Projects() {
                   onClick={closedProject}
                   className='goto_project_lower'
                 >
-                  <a href='https://github.com/andyzhp234/to-do-heroku'>Github</a>
+                  <a href='https://github.com/andyzhp234/to-do-list'>Github</a>
                   <a href='https://to-do-list-andyzhp.herokuapp.com/'>Live Demo</a>
                 </div>
 
