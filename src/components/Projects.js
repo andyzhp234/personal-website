@@ -7,6 +7,7 @@ export default function Projects() {
     'space-mini-game':false,
     'marketplace':false,
     'to-do-list':false,
+    'qr-code':false,
   });
 
   function clickedProject(e) {
@@ -25,6 +26,8 @@ export default function Projects() {
       target = 'marketplace';
     } else if (target === 'to-do-list1') {
       target = 'to-do-list';
+    } else if (target === 'qr-code1') {
+      target = 'qr-code';
     }
     setClicked(prevState=> ({
       ...prevState,
@@ -88,7 +91,7 @@ export default function Projects() {
           {projectClicked['space-mini-game'] === false ?
             <img
               name="space-mini-game"
-              src="space-mini-game.JPG"
+              src="space-mini-game1.png"
               alt="website_img"
               className='project_items'
               onClick={clickedProject}
@@ -130,58 +133,7 @@ export default function Projects() {
       </div>
       
       <div className='project_sections'>
-        
-        
         <div className='project_type_two' data-aos="zoom-in">
-          <div className='project_name'>
-            To-Do List
-          </div>
-          {projectClicked['to-do-list'] === false ?
-            <img
-              name="to-do-list"
-              src="to-do.JPG"
-              alt="website_img"
-              className='project_items'
-              onClick={clickedProject}
-            />:
-            <div
-              className='project_clicked_view fourth'
-            >
-              <div
-                id="to-do-list"
-                className='project_black_wrapper'
-                onClick={closedProject}>
-        
-                <div className='project_name'>
-                  To-Do List
-                </div>
-
-                <div className='project_skills'>
-                  <p>Vue.js</p>
-                  <p>Django</p>
-                  <p>SQLite</p>
-                </div>
-
-                <div
-                  id="to-do-list1"
-                  onClick={closedProject}
-                  className='goto_project_lower'
-                >
-                  <a href='https://github.com/andyzhp234/to-do-list'>Github</a>
-                  <a href='https://to-do-list-andyzhp.herokuapp.com/'>Live Demo</a>
-                </div>
-
-
-              </div>
-            </div>
-          }
-        </div>
-
-
-
-
-
-        <div className='project_type_one' data-aos="zoom-in">
           <div className='project_name'>
             Facebook Marketplace Clone
           </div>
@@ -227,12 +179,137 @@ export default function Projects() {
           }
         </div>
 
+        <div className='project_type_one' data-aos="zoom-in">
+          <div className='project_name'>
+            To-Do List
+          </div>
+          {projectClicked['to-do-list'] === false ?
+            <img
+              name="to-do-list"
+              src="to-do.JPG"
+              alt="website_img"
+              className='project_items'
+              onClick={clickedProject}
+            />:
+            <div
+              className='project_clicked_view fourth'
+            >
+              <div
+                id="to-do-list"
+                className='project_black_wrapper'
+                onClick={closedProject}>
+        
+                <div className='project_name'>
+                  To-Do List
+                </div>
 
+                <div className='project_skills'>
+                  <p>Vue.js</p>
+                  <p>Django</p>
+                  <p>SQLite</p>
+                </div>
 
-
-
+                <div
+                  id="to-do-list1"
+                  onClick={closedProject}
+                  className='goto_project_lower'
+                >
+                  <a href='https://github.com/andyzhp234/to-do-list'>Github</a>
+                  <a href='https://task-management-andyzhp.herokuapp.com/'>Live Demo</a>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
       </div>
 
+      <div className='project_sections'>
+        <div className='project_type_one' data-aos="fade-up">
+          <div className='project_name'>
+            More Coming Soon
+          </div>
+          {/* {projectClicked['chat-app'] === false ?
+            <img 
+              name="chat-app"
+              src="chat_app.JPG"
+              alt="website_img"
+              className='project_items'
+              onClick={clickedProject}
+            />:
+            <div
+              className='project_clicked_view first'
+            >
+              <div
+                id="chat-app"
+                className='project_black_wrapper'
+                onClick={closedProject}
+              >
+                <div className='project_name'>
+                  Real Time Chat App
+                </div>
+                <div className='project_skills'>
+                  <p>React</p>
+                  <p>Django</p>
+                  <p>SQLite</p>
+                </div>
+                <div
+                  id="chat-app1"
+                  onClick={closedProject}
+                  className='goto_project_lower'
+                >
+                  <a href='https://github.com/andyzhp234/realtime-group-chat-app'>Github</a>
+                  <a href='https://realtime-group-chat-andyzhp.herokuapp.com/'>Live Demo</a>
+                </div>
+              </div>
+            </div>
+          } */}
+          
+        </div>
+
+        <div className='project_type_two' data-aos="fade-down">
+          <div className='project_name'>
+
+          </div>
+          {projectClicked['qr-code'] === false ?
+            <img
+              name="qr-code"
+              src="qr-code.JPG"
+              alt="website_img"
+              className='project_items'
+              onClick={clickedProject}
+            />:
+            <div
+              className='project_clicked_view fifth'
+            >
+              <div
+                id="qr-code"
+                className='project_black_wrapper'
+                onClick={closedProject}
+              >
+                <div className='project_name'>
+
+                </div>
+
+                <div className='project_skills'>
+                  <p>React</p>
+                  <p>Node</p>
+                  <p>CSS</p>
+                </div>
+
+                <div
+                  id="qr-code1"
+                  onClick={closedProject}
+                  className='goto_project_lower'
+                >
+                  <a href='https://github.com/andyzhp234/qr-code-generator'>Github</a>
+                  <a href='https://andyzhp234.github.io/qr-code-generator/'>Live Demo</a>
+                </div>
+
+              </div>
+            </div>
+          }
+        </div>
+      </div>
     </div>
   )
 }

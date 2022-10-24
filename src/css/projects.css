@@ -14,7 +14,7 @@
 }
 
 .project_sections{
-  height: 45%;
+  height: 30%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -69,7 +69,7 @@
 }
 
 .project_clicked_view.second{
-  background-image: url('../../public/space-mini-game.JPG');
+  background-image: url('../../public/space-mini-game1.png');
 }
 
 .project_clicked_view.third{
@@ -78,6 +78,10 @@
 
 .project_clicked_view.fourth{
   background-image: url('../../public/to-do.JPG');
+}
+
+.project_clicked_view.fifth{
+  background-image: url('../../public/qr-code.JPG');
 }
 
 
