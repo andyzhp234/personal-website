@@ -1,0 +1,60 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/extendable";
+
+.about {
+  @extend %section;
+
+  &__container {
+    @extend %section-container;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__infos {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.selfie {
+  // padding: 0px 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 456px;
+    height: 456px;
+  }
+}
+
+@include breakpoints.breakpoint(tablet) {
+  .about {
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 30px 0px;
+    }
+  }
+}
+
+@include breakpoints.breakpoint(mobile) {
+  .about {
+    &__infos {
+      font-size: 1rem;
+    }
+  }
+  .selfie {
+    img {
+      width: 228px;
+      height: 228px;
+    }
+  }
+}

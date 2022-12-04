@@ -1,0 +1,15 @@
+.footer {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+
+  &__container {
+    width: 80%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+  }
+}

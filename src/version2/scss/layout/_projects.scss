@@ -1,0 +1,179 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/extendable";
+
+.projects {
+  @extend %section;
+
+  &__container {
+    @extend %section-container;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+}
+
+.project {
+  min-height: 500px;
+  width: 100%;
+  border: 1px solid #cecece;
+  margin: 40px 0px;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &__infos {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-size: 3rem;
+      border-bottom: 1px solid #cecece;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      height: 100%;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    &__tech-stacks {
+      display: flex;
+      margin-bottom: 20px;
+      img {
+        width: 33px;
+        height: 33px;
+        margin-right: 10px;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      img {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+      }
+      a {
+        margin-right: 20px;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+      max-width: 85%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    &__overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      backdrop-filter: blur(1px);
+      width: 70%;
+      height: 70%;
+      opacity: 0;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &__content {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 25px !important;
+          height: 25px !important;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoints.breakpoint(tablet) {
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+  .project__infos {
+    padding-bottom: 0px;
+  }
+  .project__image {
+    padding: 50px;
+    img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+}
+
+@include breakpoints.breakpoint(mobile) {
+  .project__infos {
+    padding: 40px;
+    padding-bottom: 0px;
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__description {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    &__tech-stacks {
+      margin-bottom: 10px;
+      img {
+        width: 27px;
+        height: 27px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .project__image {
+    padding: 25px;
+    img {
+      width: 80%;
+      height: 80%;
+    }
+
+    &__overlay {
+      &__content {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        img {
+          width: 25px !important;
+          height: 25px !important;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
