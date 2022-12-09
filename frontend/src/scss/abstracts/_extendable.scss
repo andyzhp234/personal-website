@@ -1,0 +1,25 @@
+@use "../abstracts/breakpoints";
+
+%section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px;
+  margin-bottom: 120px;
+}
+
+%section-container {
+  width: 80%;
+  max-width: 1300px;
+}
+
+%section-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+@include breakpoints.breakpoint(tablet) {
+  %section-title {
+    font-size: 2rem;
+  }
+}

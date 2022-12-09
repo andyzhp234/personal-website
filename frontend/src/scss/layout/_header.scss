@@ -1,0 +1,52 @@
+@use "../abstracts/colors";
+@use "../abstracts/breakpoints";
+
+.header {
+  width: 100%;
+  height: 75px;
+  background-color: colors.$header-background-color;
+  backdrop-filter: blur(3px);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.6);
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  font-weight: 500;
+  z-index: 10;
+
+  &__nav {
+    margin-right: 50px;
+    color: rgb(90, 90, 90);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  &__contact {
+    color: white;
+    border-radius: 20px;
+    padding: 8px 15px;
+
+    background: linear-gradient(to right, #ef6f6c, #9399e8);
+
+    transition: transform 0.2s;
+    &:hover {
+      color: white;
+      transform: translate(0, 3px);
+    }
+  }
+}
+
+@include breakpoints.breakpoint(mobile) {
+  .header {
+    font-size: 0.9rem;
+    &__nav {
+      margin-right: 17px;
+    }
+  }
+}

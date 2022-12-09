@@ -1,0 +1,69 @@
+@use "../abstracts/breakpoints";
+@use "../abstracts/extendable";
+
+.skills {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
+
+  &__container {
+    width: 80%;
+    max-width: 1300px;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__lists {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-weight: 600;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      width: 150px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+@include breakpoints.breakpoint(tablet) {
+  .skills {
+    &__lists {
+      div {
+        margin-top: 50px;
+        width: 100px;
+
+        // img {
+        //   width: 50px;
+        //   height: 50px;
+        // }
+      }
+    }
+  }
+}
+@include breakpoints.breakpoint(mobile) {
+  .skills {
+    &__lists {
+      div {
+        width: 70px;
+        font-size: 0.8rem;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
