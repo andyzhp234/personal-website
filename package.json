@@ -5,7 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon backend/server.js"
+    "server": "nodemon backend/server.js",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "author": "Haopeng Zeng",
   "license": "ISC",

@@ -27,14 +27,14 @@ export default function Contact() {
       body: JSON.stringify({ name, email, message }),
     };
 
-    await fetch("http://localhost:5000/api/sendEmail", options)
+    await fetch("https://www.hpzeng.com/api/sendEmail", options)
       .then((response) => {
         //handle response
         if (response.status === 200) {
-          setStatus("success");
-          setMessage("");
-          setEmail("");
           setName("");
+          setEmail("");
+          setMessage("");
+          setStatus("success");
         } else {
           setStatus("error");
         }
